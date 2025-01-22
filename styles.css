@@ -16,7 +16,7 @@ body {
     background-image: url('images/tiny_buddah.jpg'); /* Replace with your image */
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     transition: opacity 0.9s ease;
 }
 
