@@ -147,3 +147,7 @@ nav ul li a.active {
     border-bottom: 2px solid #fff; /* white underline */
     padding-bottom: 3px;
 }
+
+nav ul li a.active {
+  border-bottom: 2px solid #fff;
+}
