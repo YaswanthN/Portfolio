@@ -12,12 +12,15 @@ body {
 
 /* Hero Section */
 .hero-section {
-    height: 50vh;
-    background-image: url('images/tiny_buddah.jpg'); /* Replace with your image */
+    height: 40vh; /* or however tall you want */
+    background-image: url('images/tiny_buddah.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: scroll;
-    transition: opacity 0.9s ease;
+    position: relative;
+    transition: opacity 0.3s ease;
+    z-index: -1; /* optional, keeps hero behind */
+
 }
 
 /* Sticky Navigation Bar */
