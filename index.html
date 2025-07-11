@@ -44,5 +44,20 @@
     <footer>
         <p>&copy; 2024 Your Name. All rights reserved.</p>
     </footer>
+    <script>
+    window.addEventListener('scroll', function() {
+        const hero = document.querySelector('.hero-section');
+        const scrollY = window.scrollY;
+        const fadeStart = 0;
+        const fadeEnd = 200; // Adjust this value for quicker/slower fade
+
+        // Calculate opacity: 1 (top) to 0 (scrolled past fadeEnd)
+        let opacity = 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart);
+        opacity = Math.max(0, Math.min(1, opacity)); // Clamp between 0 and 1
+
+        hero.style.opacity = opacity;
+    });
+</script>
+
 </body>
 </html>
