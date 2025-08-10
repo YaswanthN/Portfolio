@@ -154,3 +154,80 @@ nav ul li a.active {
 nav ul li a.active {
   border-bottom: 2px solid #fff;
 }
+
+/* Projects: list layout */
+.projects-list {
+  display: grid;
+  gap: 28px;
+  padding: 40px 24px;
+  background: #fafafa;
+}
+
+.project-row {
+  position: relative; /* for stretched link */
+  display: grid;
+  grid-template-columns: 1.4fr 1fr; /* text | image */
+  align-items: center;
+  gap: 20px;
+  padding: 22px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.06);
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+.project-row:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.12);
+  border-color: #ddd;
+}
+
+.project-info h3 {
+  margin-bottom: 8px;
+  font-size: 22px;
+}
+
+.project-info p {
+  margin-bottom: 12px;
+  color: #444;
+}
+
+.view-btn {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.view-btn:hover { background: #555; }
+
+/* right-side image */
+.project-media img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* make whole row clickable without breaking semantics */
+.stretched-link {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* keep button above stretched link so it’s clickable/focusable */
+.view-btn { position: relative; z-index: 2; }
+
+/* responsive: stack on small screens */
+@media (max-width: 720px) {
+  .project-row {
+    grid-template-columns: 1fr;
+  }
+  .project-media img { height: 200px; }
+}
